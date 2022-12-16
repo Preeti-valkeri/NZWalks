@@ -15,6 +15,7 @@ builder.Services.AddDbContext<NZWalksDBContext>(Options => {
 });
 builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 builder.Services.AddScoped<IWalkRepository, WalkRepository>();
+builder.Services.AddScoped<IWalkdifficultyRepository,WalkdifficultyRepository>();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 var app = builder.Build();
