@@ -91,10 +91,10 @@ namespace NZWalks.API.Controllers
         public async Task<IActionResult> AddRegionAsync(DTO.AddRegionRequest addRegionRequest)
         {
             //validatation of module
-            if(!ValidateAddRegionAsync(addRegionRequest))
-            {
-                return BadRequest(ModelState);
-            }
+            //if(!ValidateAddRegionAsync(addRegionRequest))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
              //Request(DTO) to domain model
              var region = new Models.Domain.Region()
@@ -200,10 +200,10 @@ namespace NZWalks.API.Controllers
         public async Task<IActionResult> UpdateRegionsAsync([FromRoute] Guid id,[FromBody] DTO.UpdateRegionRequest UpdateRegion)
         {
             //validatation of module
-            if (!ValidateAddRegionAsync(UpdateRegion))
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ValidateAddRegionAsync(UpdateRegion))
+            //{
+            //    return BadRequest(ModelState);
+            //}
             //convert DTO to domain model
             var region = new Models.Domain.Region()
             {
