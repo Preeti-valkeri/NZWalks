@@ -22,7 +22,7 @@ namespace NZWalks.API.Repository
             claims.Add(new Claim(ClaimTypes.Email, user.EmailID));
 
             //loop into roles of users
-            user.Roles.ForEach((role)=>
+            user.Roles.ForEach((role) =>
             {
                 claims.Add(new Claim(ClaimTypes.Role, role));
             });

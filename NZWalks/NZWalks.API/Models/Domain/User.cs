@@ -1,4 +1,6 @@
-﻿namespace NZWalks.API.Models.Domain
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace NZWalks.API.Models.Domain
 {
     public class User
     {
@@ -8,6 +10,9 @@
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        [NotMapped]
         public List<string> Roles { get; set; }
+        //navigation property
+        public List<User_Role> userRole { get; set; }
     }
 }
